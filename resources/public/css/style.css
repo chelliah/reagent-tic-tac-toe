@@ -1,0 +1,70 @@
+/* some style */
+#app {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.board {
+  display: inline-block;;
+  width: 600px;
+  height: 600px;
+  background: white;
+}
+
+.row {
+  height: 200px;
+  display: flex;
+  flex-basis: 0;
+  justify-content: space-between;
+}
+
+.tile {
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+}
+
+svg {
+  height: 198px;
+  width: 198px;
+}
+
+.o {
+  fill: none;
+  stroke: #00AEEF;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: offset 2s linear forwards;
+}
+
+.x {
+  fill: none;
+  stroke: #ED1C24;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation-name: offset;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.x1 {
+  animation-delay: 0s;
+}
+
+.x2 {
+  animation-delay: 0.5s;
+}
+
+@keyframes offset {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
